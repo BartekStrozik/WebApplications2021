@@ -5,42 +5,53 @@ h1 {
 }
 
 .container {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.chapter {
-    width: 45%;
-    position: absolute;
-    left: 0%;
-    top: 20%;
+.chapters {
+    flex-basis: 45%;
 }
 
-.chapter > h3 {
+.chapters > h3 {
     font-size: 25px;
 }
 
 .pictures {
-    max-width: 45%;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 35%;
+    flex-basis: 45%;
+    position: relative;
 }
 
-/*@media (max-width: 800px) {
-    .pictures {
-        left: 0%;
-        bottom: 0%;
+@media (max-width: 1050px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
     }
-}*/
 
-/*img {
-    max-width: 100%;
+    .chapters {
+        float: left;
+        flex-basis: 100%;
+    }
+
+    .pictures {
+        float: left;
+        flex-basis: 100%;
+        padding: 10% 10% 10% 10%;
+        margin: 10% 5% 10% 5%;
+    }
+}
+
+a {
+    color: green;
+}
+
+img {
+    width: 50%;
     height: auto;
-    display: block;
-}*/
+}
 
-.img1 {
+/*.img1 {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -59,35 +70,68 @@ h1 {
     left: 250px;
     top: 50px;
     z-index: auto;
+}*/
+
+.img1 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: auto;
+}
+
+.img2 {
+    position: absolute;
+    left: 16.67%;
+    top: 25.5%;
+    z-index: auto;
+}
+
+.img3 {
+    position: absolute;
+    left: 41.67%;
+    top: 12.5%;
+    z-index: auto;
 }
 
 .img1:hover {
     z-index: 1;
     outline: 8px solid green;
-    outline-offset: 10px;
+    outline-offset: 15px;
     border-radius: 15px;
 }
 
 .img2:hover {
     z-index: 1;
     outline: 8px solid green;
-    outline-offset: 10px;
+    outline-offset: 15px;
     border-radius: 15px;
 }
 
 .img3:hover {
     z-index: 1;
     outline: 8px solid green;
-    outline-offset: 10px;
+    outline-offset: 15px;
     border-radius: 15px;
 }
 
-.more {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
+@media (max-width: 1050px) {
+    img {
+        width: 30%;
+        height: auto;
+    }
 
-.more > a {
-    color: green;
+    .img1 {
+        left: 10%;
+        top: 25%;
+    }
+    
+    .img3 {
+        left: 31.25%;
+        top: 10%;
+    }
+    
+    .img2 {
+        left: 55.5%;
+        top: 25%;
+    }
 }

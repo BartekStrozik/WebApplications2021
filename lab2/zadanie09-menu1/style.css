@@ -32,12 +32,18 @@
     background-color: red;;
 }
 
-.element-left {
+.element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-left .element {
     height: 50px;
     width: 70px;
 }
 
-.element-right {
+.menu-right .element {
     border: 1px solid black;
     height: 50px;
     width: 100px;

@@ -22,7 +22,7 @@
 }
   
   .card:hover .figure  {
-    transform: rotateY(180deg);
+    transform: rotateY(220deg);
   }
   
   .front-side, .back-side1, .back-side2 {
@@ -35,7 +35,7 @@
   
   .front-side {
     background-color: white;
-    color: black;
+    color: gray;
   }
   
   .back-side1 {
@@ -51,6 +51,21 @@
     transform: rotateY(180deg);
     position: relative;
   }
+
+ul {
+  text-align: center;
+  list-style: none;
+  line-height: 2em;
+  display: flex;
+  flex-flow: column;
+  column-gap: 1em;
+  margin: 0;
+  padding: 0 4em;
+}
+
+ul li {
+  border-bottom: 1px solid lightgrey;
+}
 
 img {
     width: 100%;

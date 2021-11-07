@@ -1,135 +1,158 @@
- /*FOR DESKTOP RESOLUTIONS*/ 
- @media (min-width: 950px){
-    .menu {
-        width: 100%;
-        height: 70px;
-        padding: 2px;
-        background-image: url('images/computer-networks.jpg');
-        position: relative;  
-    }
-
-    /*ul {
-        width: 100%;    
-        min-height: 50px;
-        color:black;
-        overflow: visible;
-    }
-
-    ul li {
-        display: block;
-        color:white;
-        position: relative;
-
-        width: 150px;
-        height: 30px;
-        padding: 0px 10px 5px 10px;
-        float: left;
-    }*/
-
-    .item {
-        width: 10%;
-        height: 10%;
-        padding: 0% 5% 0% 5%;
-        color: white;
-        float: left;
-    }
-
-    .dropbtn {
-        visibility: hidden;
-    }
-
-    a {
-        color: white;
-    }
+:root {
+  --background: rgba(0, 214, 170, .85);
 }
 
-/*FOR MOBILE RESOLUTIONS*/ 
-@media (max-width: 950px) {
-    .menu {
-        width: 100%;
-        height: 21px;
-        padding: 2px;
-        color: black; 
-        position: relative;
-    }
-
-    .logo {
-        width: 100%;
-        color: black;
-    }
-
-    .dropbtn {
-        visibility: visible;
-        width: 8%;
-        height: auto;
-        border: 0;
-        border-top: 5x solid black;
-        background: white;
-        position: relative;
-        float: right;
-    }
-
-    /*.dropbtn {
-        visibility: visible;
-        width: 5%;
-        height: auto;
-        border: 0;
-        border-top: 5x solid black;
-        background: white;
-        position: relative;
-        float: right;
-    }
-
-    .dropbtn::before, .dropbtn::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-top: 5px solid black;
-        transform: translateY(10px);
-    }
-
-    .dropbtn::after {
-        transform: translateY(25px);
-    }*/
-
-    .content {
-        position: absolute;
-        display: none;
-        background-color: #f1f1f1;
-        width: 100%;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        line-height: 2em;
-    }
-
-    .item-list:hover .content {
-        display: block;
-    }
-
-    /*ul {
-        width: 100%;       
-        color:black;
-        overflow: visible;
-    }
-
-    ul li {
-        display: block;   
-        color:black;
-        position: relative;  
-        
-
-        width: 100%;
-        min-height: 21px;
-        padding: 2px;
-    }*/
-
-    .item {
-        width: 10%;
-        height: 10%;
-        padding: 0% 5% 0% 5%;
-        color: black;
-    }
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
+body {
+	margin: 0;
+	background: white;
+}
+
+header {
+    background: rgba(17, 17, 167, 1);
+  text-align: center;
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+}
+
+.display-menu {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+.display-menu:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+  content: '';
+  position: absolute;
+}
+
+.hamburger span::before {
+  bottom: 10px;
+}
+
+.hamburger span::after {
+  top: 10px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.display-menu:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.display-menu:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    background-image: url('computer-networks.jpg');
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+  }
+  
+  nav {
+    all: unset;
+  
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    column-gap: 1em;
+  }
+  
+  nav li {
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+    text-align: center;
+  }
+}

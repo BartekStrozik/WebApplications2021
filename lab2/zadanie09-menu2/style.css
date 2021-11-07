@@ -16,13 +16,22 @@
     justify-content: space-around;
 }
 
+ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    column-gap: 1em;
+}
+
 ul li {
-    display: block;
-    color: black;
-    float: right;
-    padding: 0px 20px 5px 20px;
-    width: 10%;
-    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
 }
 
 .button {

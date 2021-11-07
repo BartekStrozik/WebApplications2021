@@ -49,19 +49,21 @@ img {
 }
 
 .back-side-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
 }
 
 .item1 {
-    align-content: space-around;
-    order: 1;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: center;
 }
 
 .item2{
-    align-content: space-around;
-    order: 2;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  padding: 5% 10% 10% 5%;
 }
 
 .reserve-btn {

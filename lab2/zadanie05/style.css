@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
     border: 1px solid black;
 }
 
@@ -50,5 +51,14 @@
 
 .figure:hover .middle2 {
     opacity: 0.5;
-    background-color: #04AA6D;
+    background: url('images/lupa2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media (max-width: 800px) {
+    .figure {
+        flex: 90%;
+        max-width: 100%;
+    }
 }

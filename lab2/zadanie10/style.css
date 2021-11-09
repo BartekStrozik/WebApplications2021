@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -8,6 +9,13 @@
     height: 600px;
     background-color: transparent;
     perspective: 1000px;
+}
+
+@media (max-width: 800px){
+    .card {
+      flex: 80%;
+      max-width: 80%;
+    }
 }
   
 .figure {

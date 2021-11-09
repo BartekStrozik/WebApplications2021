@@ -1,18 +1,22 @@
+img {
+    width: 150px;
+    height: 150px;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
 /*DISPLAY FOR DESKTOPS*/
 
 @media (min-width: 1000px){
 
 .container {
-    height: 100%;
-    width: 100%;
-}
-
-.main-grid {
     display: grid;
     grid-template-columns: [c1] 28% [c2] 50% [c3] 22% [end];
     grid-template-rows: [r1] 10% [r2] 10% [r3] 70% [r4] 10% [end];
     border: 1px solid red;
-    height: 100%;
 }
 
 .header {
@@ -65,6 +69,8 @@
     justify-content: space-around;
 }
 
+
+
 .main {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -116,11 +122,16 @@
 
     .container {
         display: flex;
+        flex-direction: row;
+        flex-flow: row;
+        flex-wrap: wrap;
+        column-gap: 2em;
+        row-gap: 2em;
     }
 
     .header {
-        float: left;
-        width: 100%;
+        flex: 100%;
+        min-width: 100%;
         height: 10%;
 
         border: 3px solid red;
@@ -128,17 +139,8 @@
     }
     
     .navigation {
-        float: left;
-        width: 100%;
-        height: 10%;
-
-        border: 3px solid red;
-        border-radius: 5px;
-    }
-    
-    .main{
-        float: left;
-        width: 100%;
+        flex: 100%;
+        min-width: 100%;
         height: 10%;
 
         border: 3px solid red;
@@ -146,30 +148,80 @@
     }
     
     .sidebar {
-        float: left;
-        width: 100%;
-        height: 10%;
+        flex: 20%;
+        min-width: 20%;
+
+        border: 3px solid red;
+        border-radius: 5px;
+    }
+
+    img {
+        flex: 80%;
+        min-width: 80%;
+    }
+
+    .main{
+        flex: 75%;
+        min-width: 75%;
 
         border: 3px solid red;
         border-radius: 5px;
     }
     
+    
+    
     .ads {
-        float: left;
-        width: 100%;
-        height: 10%;
+        flex: 20%;
+        min-width: 20%;
 
         border: 3px solid red;
         border-radius: 5px;
     }
     
     .footer {
-        float: left;
-        width: 100%;
-        height: 10%;
+        flex: 75%;
+        min-width: 75%;
 
         border: 3px solid red;
         border-radius: 5px;
     }
     
+}
+
+/*DISPLAY FOR MOBILES*/
+
+@media (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-flow: column;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        row-gap: 2em;
+    }
+
+    .header {
+        flex: 10%;
+    }
+
+    .navigation {
+        flex: 10%;
+    }
+
+    .main {
+        flex: 50%;
+    }
+
+    .sidebar {
+        flex: 10%;
+    }
+
+    .ads {
+        flex: 10%;
+    }
+
+    .footer {
+        flex: 10%;
+    }
 }

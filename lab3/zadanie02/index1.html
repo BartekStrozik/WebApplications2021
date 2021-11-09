@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #obrazek {
+            width: 600px;
+            margin: 30px;
+            outline: 10px solid;
+            outline-offset: 15px;
+            outline-color: tomato;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <img id="obrazek" src="images/mountain1.jpg">
+    <button id="button">Zmień zdjęcie</button>
+
+    <script>
+        var img_count = 0;
+        var img_arr = ["images/mountain1.jpg", "images/skate3-medium.jpg"]
+        var outline_arr = ["tomato", "blue"]
+
+
+        let button = document.getElementById("button");
+        button.addEventListener("click", updateDoc, false);
+
+        function updateDoc() {
+            let obrazek = document.getElementById("obrazek");
+            img_count++;
+            obrazek.src = img_arr[img_count % 2];
+            obrazek.style.outlineColor = outline_arr[img_count % 2];
+        }
+    </script>
+</body>
+</html>

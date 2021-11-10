@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    min-height: 700px;
+}
+
+.one-pt-pool {
+    align-items: center;
+    position: relative;
+    min-width: 300px;
+    height: 300px;
+    z-index: 1;
+    border: 3px solid blue;
+}
+
+.two-pt-pool {
+    position: absolute;
+    bottom: 0;
+    left: 88px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    border: 3px solid red;
+    
+}
+
+.five-pt-pool {
+    position: absolute;
+    bottom: 5%;
+    left: 18px;
+    width: 80px;
+    height: 80px;
+    z-index: 3;
+    border: 3px solid yellow;
+}
+
+#add-pts {
+    width: 50px;
+    height: 20px;
+}
+
+#points {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 250px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid blue;
+}
+
+.counter {
+    flex: 50%;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: blue;
+}
+
+.propagation-change {
+    position: absolute;
+    bottom: 200px;
+    max-width: 100px;
+    max-height: 40px;
+}
+
+#announcement {
+    position: absolute;
+    bottom: 180px;
+}
+

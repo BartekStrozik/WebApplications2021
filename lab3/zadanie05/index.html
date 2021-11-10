@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="one-pt-pool">
+            <div class="two-pt-pool">
+                <div class="five-pt-pool">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="points">
+            <p class="counter">0</p>
+        </div>
+
+        <div id="announcement">
+        </div>
+
+        <button class="propagation-change">
+            Stop Propagation
+        </button>
+    </div>
+
+    <script>
+        var points = 0;
+        var propagation = true;
+
+        let propagation_button = document.getElementsByClassName("propagation-change")[0];
+
+        propagation_button.addEventListener("click", e => {
+            if(propagation){
+                propagation = false;
+                document.getElementsByClassName("propagation-change")[0].innerHTML = "Start Propagation";
+            }
+            else {
+                propagation = true;
+                document.getElementsByClassName("propagation-change")[0].innerHTML = "Stop Propagation";
+            }
+        });
+
+        function addPoints(added_points) {
+            points = points + added_points;
+            document.getElementById("points").innerHTML = points;
+        }
+
+        let one_point_pool = document.getElementsByClassName("one-pt-pool");
+        let two_points_pool = document.getElementsByClassName("two-pt-pool");
+        let five_points_pool = document.getElementsByClassName("five-pt-pool");
+
+        one_point_pool[0].addEventListener("click", e => {
+            addPoints(1);
+            console.log("One Bubble");
+            if(!propagation){
+                e.stopPropagation();
+                console.log("One Stopped");
+            }
+        }
+        );
+
+        two_points_pool[0].addEventListener("click", e => {
+            addPoints(2);
+            console.log("Two Bubble");
+            if(!propagation){
+                e.stopPropagation();
+                console.log("Two Stopped");
+            }
+        }
+        );
+
+        five_points_pool[0].addEventListener("click", e => {
+            addPoints(5);
+            console.log("Five Bubble");
+            if(!propagation){
+                e.stopPropagation();
+                console.log("Five Stopped");
+            }
+        }
+        );
+    </script>    
+</body>
+</html>

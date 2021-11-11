@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 5px 10px 5px 10px;
+    column-gap: 2em;
+    row-gap: 10em;
+    align-self: center;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.form-group {
+    flex: 30%;
+    max-width: 380px;
+}
+
+@media(max-width: 950px) {
+    .form-group {
+        flex: 45%;
+        max-width: 400px;
+    }
+}

@@ -16,6 +16,11 @@
     justify-content: flex-start;
 }
 
+.remove {
+    width: 100px;
+    height: 50px;
+}
+
 .form-group {
     flex: 30%;
     max-width: 380px;

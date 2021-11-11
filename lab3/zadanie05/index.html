@@ -11,27 +11,41 @@
 <body>
     <div class="container">
         <div class="one-pt-pool">
+            1
             <div class="two-pt-pool">
+                2
                 <div class="five-pt-pool">
-                    
+                    5
                 </div>
             </div>
         </div>
 
         <div id="points">
-            <p class="counter">0</p>
-        </div>
-
-        <div id="announcement">
+            <p style="flex: 50%;
+            align-items: center;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            color: blue;">0</p>
         </div>
 
         <button class="propagation-change">
             Stop Propagation
         </button>
+
+        <div id="announcement">
+            Hit pools to collect points!
+        </div>
+
+        <button class="reset">
+            Reset
+        </button>
     </div>
 
     <script>
-        var points = 0;
+
+        /* START/STOP PROPAGATION */
+
         var propagation = true;
 
         let propagation_button = document.getElementsByClassName("propagation-change")[0];
@@ -47,44 +61,82 @@
             }
         });
 
-        function addPoints(added_points) {
-            points = points + added_points;
+        /* COLLECTING POINTS DUNCTIONS */
+
+        var points = 0;
+
+        function addPoints(points_to_add) {
+            points = points + points_to_add;
             document.getElementById("points").innerHTML = points;
         }
-
+        
         let one_point_pool = document.getElementsByClassName("one-pt-pool");
         let two_points_pool = document.getElementsByClassName("two-pt-pool");
         let five_points_pool = document.getElementsByClassName("five-pt-pool");
-
+        
         one_point_pool[0].addEventListener("click", e => {
             addPoints(1);
-            console.log("One Bubble");
+            //console.log("One Bubble");
             if(!propagation){
                 e.stopPropagation();
-                console.log("One Stopped");
+                //console.log("One Stopped");
             }
-        }
-        );
+        });
 
         two_points_pool[0].addEventListener("click", e => {
+            if(points >= 30){
+                this.removeEventListener("click", arguments.callee);
+                //document.getElementsByClassName("two-pt-pool").style
+            }
             addPoints(2);
-            console.log("Two Bubble");
+            //console.log("One Bubble");
             if(!propagation){
                 e.stopPropagation();
-                console.log("Two Stopped");
+                //console.log("One Stopped");
             }
         }
         );
 
         five_points_pool[0].addEventListener("click", e => {
-            addPoints(5);
-            console.log("Five Bubble");
-            if(!propagation){
-                e.stopPropagation();
-                console.log("Five Stopped");
+            if(points >= 50){
+                this.removeEventListener("click", arguments.callee);
             }
-        }
+            addPoints(5);
+            //console.log("One Bubble");
+            if(!propagation){
+                 e.stopPropagation();
+                //console.log("One Stopped");
+            }
+        });
+
+        let reset_button = document.getElementsByClassName("reset")[0];
+        reset_button.addEventListener("click", e => {
+            points = 0;
+            document.getElementById("points").innerHTML = points;
+        });
+
+
+        /*one_point_pool[0].addEventListener(("click"), e => {
+            document.getElementById("announcement").innerHTML = "Hit 1 point pool!";
+            e.stopPropagation();
+        },
+        {capture: false}
         );
+
+        two_points_pool[0].addEventListener(("click"), e => {
+            document.getElementById("announcement").innerHTML = "Hit 2 points pool!";
+            e.stopPropagation();
+        },
+        {capture: false}
+        );
+
+        five_points_pool[0].addEventListener(("click"), e => {
+            document.getElementById("announcement").innerHTML = "Hit 5 points pool!";
+            e.stopPropagation();
+        },
+        {capture: false}
+        );*/
+
     </script>    
 </body>
 </html>

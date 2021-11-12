@@ -6,9 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadanie 4</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-    
-</body>
+    <button class="test">
+        Przycisk testowy
+    </button>
+
+    <button class="activate">
+        Aktywuj przycisk testowy
+    </button>
+
+    <button class="deactivate">
+        Dezaktywuj przycisk testowy
+    </button>
+
+    <div id="announcement">
+        Przycisk zdezaktywowany
+    </div>
+
+    <script>
+        var points = 0;
+        var activated = true;
+
+        let activate_button = document.getElementsByClassName("activate")[0];
+        activate_button.addEventListener("click", e => {
+            activated = true;
+            document.getElementById("announcement").innerHTML = "Licznik: " + points;
+        })
+
+        let deactivate_button = document.getElementsByClassName("deactivate")[0];
+        deactivate_button.addEventListener("click", e =>{
+            activated = false;
+            points = 0;
+            document.getElementById("announcement").innerHTML = "Przycisk zdezaktywowany";
+        })
+
+        let test_button = document.getElementsByClassName("test")[0];
+        test_button.addEventListener("click", e => {
+            if(activated){
+                points = points + 1;
+                document.getElementById("announcement").innerHTML = "Licznik: " + points;
+            }
+        })
+    </script>
+
+</body> 
 </html>

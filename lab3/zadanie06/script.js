@@ -6,23 +6,24 @@ class Contact {
 }
 
 class UI {
-    static displayContacts() {
-        const contacts = Store.getContacts();
-        contacts.forEach((contact) => {
-            UI.addContactToList(contact);
-        });
-    }
-
-    static addContactToList(contact) {
+    static appendContact(contact) {
         const list = document.querySelector("#contact-list");
         const div = document.createElement("div");
         div.innerHTML = `
             <div class="card">
-                ${contact.name}<br>${contact.phone_number}
-                <i
-                    class="far fa-trash-alt"
-                    style="pointer: finger">
-                </i>
+                <ul style="list-style: none;">
+                <li><strong>${contact.name}</strong></li>
+                <li>${contact.phone_number}</li>
+                </ul>
+                <div class="trash">
+                    <i
+                        class="far fa-trash-alt"
+                        style="pointer: finger;
+                        margin: 5px;
+                        color: white;
+                        flex: center">
+                    </i>
+                </div>
             </div>
         `
         list.appendChild(div);
@@ -41,7 +42,6 @@ class UI {
         const container = document.querySelector(".container-mt-4");
         const form = document.querySelector("contact-form");
         container.insertBefore(div, form);
-        //Vanish in 3 seconds
         setTimeout(() => {
             document.querySelector(".alert").remove()
         },
@@ -63,11 +63,17 @@ document.querySelector("#contact-form").addEventListener("submit", e => {
     const name = document.querySelector("#name").value;
     const phone_number = document.querySelector("#phone-number").value;
     if(name === "" || phone_number === ""){
-        UI.showAlert("Please fill in all fields!", "danger")
+        UI.showAlert("Fill in all fields!", "danger");
+    }
+    else if(!name.toString().match(/^[A-Z]+[A-Za-z]+$/)) {
+        UI.showAlert("Name should start with big letter and consist of only letters!", "danger");
+    }
+    else if (!phone_number.toString().match(/^[0-9]+(\.?[0-9]+)?$/) || phone_number.length != 9){
+        UI.showAlert("Phone number should consist of 9 numbers!", "danger");
     }
     else{
         const contact = new Contact(name, phone_number);
-        UI.addContactToList(contact);
+        UI.appendContact(contact);
         UI.clearFields();
     }
 });

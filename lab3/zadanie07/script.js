@@ -1,9 +1,3 @@
-class City {
-    constructor(name)
-}
-
-const container = document.querySelector(".container");
-
 const renderCities = async() => {
     let uri = "http://localhost:3000/cities";
     const res = await fetch(uri);
@@ -29,7 +23,7 @@ const renderCities = async() => {
                 template += `${city.name}, `
             }
         }
-    })
+    });
 
     /*let message = "ocacurs";
     let index = message.indexOf('a');
@@ -45,7 +39,15 @@ const renderCities = async() => {
     two_a_chars_cities.innerHTML = template;
     
     /* task (c) */
-
+    template = "";
+    let max_dentensity = 0;
+    cities.forEach(city => {
+        if(city.dentensity > max_dentensity){
+            template = `${city.name}: ${city.dentensity}`;
+        }
+    });
+    const max_dentensity = document.querySelector(".max-dentensity");
+    max_dentensity.innerHTML = template;
 
     /* all cities */
     template = "";

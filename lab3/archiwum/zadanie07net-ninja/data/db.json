@@ -1,0 +1,30 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Welcome to the new blog",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante justo, efficitur sed bibendum sed, pulvinar at felis. Donec nec consequat est, non rutrum ex. Sed diam urna, scelerisque eu tempus vel, vulputate ac velit. Nam pretium, massa venenatis convallis pretium, augue ipsum accumsan magna, eu scelerisque nulla quam eu erat. Nulla ultrices dolor diam. Nam mollis felis neque, vel condimentum ipsum congue in. Etiam sollicitudin purus quis urna ultrices efficitur.",
+            "likes": 30
+        },
+        {
+            "id": 2,
+            "title": "How to be a net ninija!",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante justo, efficitur sed bibendum sed, pulvinar at felis. Donec nec consequat est, non rutrum ex. Sed diam urna, scelerisque eu tempus vel, vulputate ac velit. Nam pretium, massa venenatis convallis pretium, augue ipsum accumsan magna, eu scelerisque nulla quam eu erat. Nulla ultrices dolor diam. Nam mollis felis neque, vel condimentum ipsum congue in. Etiam sollicitudin purus quis urna ultrices efficitur.",
+            "likes": 15
+        },
+        {
+            "id": 3,
+            "title": "Second course",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante justo, efficitur sed bibendum sed, pulvinar at felis. Donec nec consequat est, non rutrum ex. Sed diam urna, scelerisque eu tempus vel, vulputate ac velit. Nam pretium, massa venenatis convallis pretium, augue ipsum accumsan magna, eu scelerisque nulla quam eu erat. Nulla ultrices dolor diam. Nam mollis felis neque, vel condimentum ipsum congue in. Etiam sollicitudin purus quis urna ultrices efficitur.",
+            "likes": 25
+        }
+    ],
+    "polls": [
+        {
+            "id": 1,
+            "question": "Prefer Angular or React?",
+            "answerA": "Angular",
+            "answerB": "React"
+        }
+    ]
+}

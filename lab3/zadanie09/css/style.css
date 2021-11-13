@@ -1,0 +1,53 @@
+.container {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* carousel cards styles */
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item-container {
+    background: lightgreen;
+    padding: 10px;
+    height: 85%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel-card {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%; 
+}
+
+/* buttons < and > */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.previous-item {
+    cursor: pointer;
+}
+
+.next-item {
+    cursor: pointer;
+}

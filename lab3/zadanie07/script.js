@@ -4,14 +4,12 @@ const renderCities = async() => {
     const cities = await res.json();
 
     /* task (a): give me cities only from małopolskie province */
-    let template = "";
-    cities.forEach(city => {
-        if(city.province === "małopolskie"){
-            template += `${city.name}, `
-        }
-    });
     const requested_province = document.querySelector(".requested-province");
-    requested_province.innerHTML = template;
+    requested_province.innerHTML = cities
+        .filter(city => city.province === "małopolskie")
+        .map(city => city.name)
+        .join(", ");
+
 
     /* task (b) */
     template = "";
@@ -25,16 +23,6 @@ const renderCities = async() => {
         }
     });
 
-    /*let message = "ocacurs";
-    let index = message.indexOf('a');
-    let short_msg = message.substring(0, message.length);
-    console.log("index: " + index);
-    console.log(message.length);
-    console.log(short_msg);*/
-
-    //const answer = document.querySelector(".answer");
-    //answer.innerHTML = template;
-
     const two_a_chars_cities = document.querySelector(".two-a-chars-cities");
     two_a_chars_cities.innerHTML = template;
     
@@ -46,8 +34,8 @@ const renderCities = async() => {
             template = `${city.name}: ${city.dentensity}`;
         }
     });
-    const max_dentensity = document.querySelector(".max-dentensity");
-    max_dentensity.innerHTML = template;
+    const max_dentensity_city = document.querySelector(".max-dentensity");
+    max_dentensity_city.innerHTML = template;
 
     /* all cities */
     template = "";

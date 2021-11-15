@@ -10,7 +10,7 @@
 .carousel-item-container {
     background: white;
     padding: 10px;
-    height: 85%;
+    height: 80%;
     position: relative;
     overflow: hidden;
 }
@@ -89,14 +89,44 @@
     cursor: pointer;
 }
 
+.random {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .random-item {
-    width: 100px;
+    width: 150px;
     height: 40px;
     border: 2px solid lightblue;
     font-weight: bolder;
-    color: blue;
 }
 
 .is-hidden {
     display: none;
+}
+
+/* display for mobile resolutions */
+
+@media (max-width: 800px) {
+    .carousel-item-container {
+        background: white;
+        height: 80%;
+        position: relative;
+    }
+    
+    .picture {
+        width: 70%;
+        height: 50%;
+    }
+    
+    .image {
+        position: absolute;
+        left: 20%;
+        top: 0;
+        width: 60%;
+        height: 30%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
 }

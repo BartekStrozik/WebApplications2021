@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zadanie 5</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -21,12 +21,7 @@
         </div>
 
         <div id="points">
-            <p style="flex: 50%;
-            align-items: center;
-            text-align: center;
-            font-size: 40px;
-            font-weight: bolder;
-            color: blue;">0</p>
+            0
         </div>
 
         <button class="propagation-change">
@@ -86,7 +81,7 @@
         two_points_pool[0].addEventListener("click", e => {
             if(points >= 30){
                 this.removeEventListener("click", arguments.callee);
-                //document.getElementsByClassName("two-pt-pool").style
+                //this.style.backgroundColor = "gray";
             }
             addPoints(2);
             //console.log("One Bubble");
@@ -100,6 +95,7 @@
         five_points_pool[0].addEventListener("click", e => {
             if(points >= 50){
                 this.removeEventListener("click", arguments.callee);
+                //this.style.backgroundColor = "gray";
             }
             addPoints(5);
             //console.log("One Bubble");

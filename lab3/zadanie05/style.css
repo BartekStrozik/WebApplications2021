@@ -11,7 +11,6 @@
     position: relative;
     min-width: 300px;
     height: 300px;
-    z-index: 1;
     border: 3px solid blue;
     background-color: blue;
 }
@@ -22,7 +21,6 @@
     left: 88px;
     width: 120px;
     height: 120px;
-    z-index: 2;
     border: 3px solid red;
     background-color: red;
 }
@@ -33,7 +31,6 @@
     left: 18px;
     width: 80px;
     height: 80px;
-    z-index: 3;
     border: 3px solid yellow;
     background-color: yellow;
 }
@@ -51,6 +48,11 @@
     width: 80px;
     height: 80px;
     border: 3px solid blue;
+
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: blue;
 }
 
 .propagation-change {

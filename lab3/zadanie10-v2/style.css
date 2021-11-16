@@ -1,0 +1,47 @@
+/* categories */
+
+.categories {
+    list-style: none;
+}
+
+/*.category::before {
+    content: "\2610";
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.category.active::before {
+    content: "\2611";
+}*/
+
+/* items-toggler and ul items list */
+
+.items-toggler::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: 250ms ease-in-out;
+}
+
+.items-toggler.active::before {
+    transform: rotate(90deg);
+}
+
+.items {
+    list-style: none;
+    display: none;
+}
+
+.items.active {
+    display: block;
+}
+
+/* item */
+
+.item::before {
+    content: "\2610";
+}
+
+.item.active::before {
+    content: "\2611";
+}

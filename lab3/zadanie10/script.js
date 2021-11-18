@@ -111,13 +111,32 @@ const loadJSONs = async() => {
     categoriesTree.innerHTML = template;
 }
 
+let productsArray = [];
+
+function updateMainSection(item, addFlag){
+    let template = `<ul>`;
+    if(addFlag){
+        productsArray.push(item);
+    }
+    else {
+        var i = productsArray.indexOf(item);
+        productsArray.splice(i, 1);
+    }
+    productsArray.forEach(product => {
+        template += `<li>${product.textContent}</li>`;
+    });
+    template += `</ul>`;
+    let mainSection = document.getElementsByClassName("main-section")[0];
+    mainSection.innerHTML = template;
+}
+
 function onClick(itemsToggler) {
     itemsToggler.classList.toggle("active");
     itemsToggler.nextElementSibling.classList.toggle("active");
 }
 
 function onClickItem(item) {
-    item.classList.toggle("active");
+    updateMainSection(item, item.classList.toggle("active"));
 }
 
 itemsTogglers = document.querySelectorAll(".items-toggler");

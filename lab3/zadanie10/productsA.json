@@ -19,12 +19,34 @@
                 { "nazwa": "Chrupki kukurydziane"}
             ]
 	    },
+        {
+			"Owoce" : [
+				{ "nazwa": "Grejpfrut" },
+				{ "nazwa": "Cytryna" },
+				{ "nazwa": "Winogrona" }
+			]
+		},
+        {
+			"Pieczywo" : [
+				{ "nazwa": "Bułka" }, 
+				{ "nazwa": "Chleb żytni" },
+				{ "nazwa": "Kajzerka" }
+			]
+		},
 	    {   
 		    "Soki" : [ 
                 { "nazwa": "Jupi" }, 
                 { "nazwa": "Kubuś" }, 
                 { "nazwa": "Hoop" }
             ]
-	    }
+	    },
+        {
+            "Samoloty" : [
+                { "nazwa": "Boeing"},
+                { "nazwa": "Aerocar"},
+                { "nazwa": "Beechcraft"},
+                { "nazwa": "Caproni"}
+            ]
+        }
 	]
 }

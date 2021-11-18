@@ -1,0 +1,18 @@
+{
+	"ProduktyB" : {
+	"Samochody" : [
+		{ "nazwa": "Fiat" }, 
+		{ "nazwa": "Mercedes" }
+	],
+
+	"Rowery" : [ 
+		{ "nazwa": "Kross" }, 
+		{ "nazwa": "Merida"}
+	],
+ 
+	"Soki" : [ 
+		{ "nazwa": "Jupi" }, 
+		{ "nazwa": "Kubuś" }
+	]
+	}
+}

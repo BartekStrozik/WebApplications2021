@@ -1,26 +1,30 @@
 {
-	"ProduktyA" : {
-	"Samochody" : [
-		{ "nazwa": "Fiat" },
-		{ "nazwa": "BMW" },
-		{ "nazwa": "Volkswagen" },
-		{ "nazwa": "Opel" },
-		{ "nazwa": "Mazda"}
-	], 
-
-	"Słodycze" : [ 
-		{ "nazwa": "Czekolada" }, 
-		{ "nazwa": "Cukierki" },
-		{ "nazwa": "Żelki" },
-		{ "nazwa": "Ciastka" },
-		{ "nazwa": "Krakersy" },
-		{ "nazwa": "Chrupki kukurydziane"}
-	],
- 
-	"Soki" : [ 
-		{ "nazwa": "Jupi" }, 
-		{ "nazwa": "Kubuś" }, 
-		{ "nazwa": "Hoop" }
+	"ProduktyA" : [
+	    {
+		    "Samochody" : [
+                { "nazwa": "Fiat" },
+                { "nazwa": "BMW" },
+                { "nazwa": "Volkswagen" },
+                { "nazwa": "Opel" },
+                { "nazwa": "Mazda"}
+            ]
+	    },
+	    {
+		    "Słodycze" : [ 
+                { "nazwa": "Czekolada" }, 
+                { "nazwa": "Cukierki" },
+                { "nazwa": "Żelki" },
+                { "nazwa": "Ciastka" },
+                { "nazwa": "Krakersy" },
+                { "nazwa": "Chrupki kukurydziane"}
+            ]
+	    },
+	    {   
+		    "Soki" : [ 
+                { "nazwa": "Jupi" }, 
+                { "nazwa": "Kubuś" }, 
+                { "nazwa": "Hoop" }
+            ]
+	    }
 	]
-	}
 }

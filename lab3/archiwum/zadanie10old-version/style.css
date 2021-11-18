@@ -1,0 +1,86 @@
+/* cateogries */
+
+.categories {
+    list-style: none;
+}
+
+.category::before {
+    content: "\25B6\2610";
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.category.active::before {
+    content: "\25BC\2611";
+}
+
+.category.all_selected::before {
+    content: "\25BC\2611";
+}
+
+/* items */
+
+.items {
+    list-style: none;
+    display: none;
+}
+
+.items.active {
+    display: block;
+}
+
+.item::before {
+    content: "\2610";
+}
+
+.item.active::before {
+    content: "\2611";
+}
+
+/*.categories {
+    list-style: none;
+}
+
+// toggler and toggler-target
+
+.toggler::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggler.active::before {
+    transform: rotate(90deg);
+}
+
+.toggler-target{
+    list-style: none;
+    display: none;
+}
+
+.toggler-target.active{
+    display: block;
+}
+
+// categories and items 
+
+.category::before {
+    content: "\2610";
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.category.active::before {
+    content: "\2611";
+}
+
+.item::before {
+    content: "\2610";
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.item.active::before {
+    content: "\2611";
+}*/

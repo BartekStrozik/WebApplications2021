@@ -1,6 +1,10 @@
-html{ 
-    width:100%; height:100%; 
-    background:#fff url("board-bg.jpg") center center no-repeat;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("board-bg.jpg") center center no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;
+    overflow: hidden;
 }

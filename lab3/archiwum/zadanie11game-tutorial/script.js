@@ -7,6 +7,7 @@ canvas.height = 500;
 
 let score = 0;
 let gameFrame = 0;
+ctx.font = "50px Georgia";
 
 //Mouse Interactivity
 let canvasPosition = canvas.getBoundingClientRect();
@@ -19,8 +20,8 @@ const mouse = {
 
 canvas.addEventListener("mousedown", function(e) {
     mouse.click = true;
-    mouse.x = e.x;
-    mouse.y = e.y;
+    mouse.x = e.x - canvasPosition.left;
+    mouse.y = e.y - canvasPosition.top;
     console.log(e.x, e.y);
 });
 
@@ -31,14 +32,14 @@ canvas.addEventListener("mouseup", function(e){
 //Player
 class Player {
     constructor() {
-        this.x = canvas.width/2;
+        this.x = canvas.width;
         this.y = canvas.height/2;
         this.radius = 50;
         this.angle = 0;
         this.frameX = 0;
         this.frameY = 0;
-        this.spriteWidth = 498;//zombie:138;
-        this.spriteHeight = 327;//zombie:236
+        this.spriteWidth = 498;
+        this.spriteHeight = 327;
     }
 
     update() {
@@ -73,13 +74,17 @@ const bubblesArray = [];
 class Bubble {
     constructor(){
         this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.y = canvas.height + Math.random() * canvas.height;
         this.radius = 50;
         this.speed = Math.random() * 5 + 1;
         this.distance;
+        this.counted = false;
     }
     update() {
         this.y -= this.speed;
+        const dx = this.x - player.x;
+        const dy = this.y - player.y;
+        this.distance = Math.sqrt(dx*dx + dy*dy);
     }
 
     draw(){
@@ -96,9 +101,23 @@ function handleBubbles(){
     if(gameFrame % 50 == 0){
         bubblesArray.push(new Bubble);
     }
-    for (let i = 0; i <bubblesArray.length; i++){
+    for (let i = 0; i < bubblesArray.length; i++){
         bubblesArray[i].update();
         bubblesArray[i].draw();
+    }
+    for(let i=0; i < bubblesArray.length; i++){
+        if(bubblesArray[i].y < 0 - bubblesArray[i].radius * 2){
+            bubblesArray[i].splice(i, 1);
+        }
+        if(bubblesArray[i].distance < bubblesArray[i].radius + player.radius){
+            console.log("collision");
+            if(!bubblesArray[i].counted){
+                score++;
+                bubblesArray[i].counted = true;
+                bubblesArray[i].splice(i, 1);
+            }
+            
+        }
     }
 }
 
@@ -108,6 +127,7 @@ function animate(){
     handleBubbles();
     player.update();
     player.draw();
+    ctx.fillText("score: " + score, 10, 50);
     gameFrame++;
     requestAnimationFrame(animate);
 }

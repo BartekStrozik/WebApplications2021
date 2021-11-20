@@ -1,39 +1,54 @@
-var zoombiePicture = document.createElement("img");
-
-var canvas, ctx;
+var canvas = document.getElementById("gameCanvas");
+var ctx = canvas.getContext('2d');
 var gameFrame = 0;
 
-var mouseX = 0;
-var mouseY = 0;
+var zoombiePicture = document.createElement("img");
+zoombiePicture.src = "zoombie1.png";
+const zoombieWidth = 128;
+const zoombieHeight = 236;
 
-function updateMousePos(evt) {
-	var rect = canvas.getBoundingClientRect();
-	var root = document.documentElement;
+let score = 0;
 
-	mouseX = evt.clientX - rect.left - root.scrollLeft;
-	mouseY = evt.clientY - rect.top - root.scrollTop;
-}
+let lifes = 3;
+var lifePicture = document.createElement("img");
+lifePicture.src = "transparent-heart.png";
 
-window.onload = function() {
-	canvas = document.getElementById("gameCanvas");
-	ctx = canvas.getContext('2d');
-	//var framesPerSecond = 30;
-	//setInterval(animate, 1000/framesPerSecond);
-	canvas.addEventListener("mousemove", updateMousePos);
-	zoombiePicture.src = "zoombie1.png";
-	animate();
-}
+let mouseX = 0;
+let mouseY = 0;
+let mouseClick = false;
+
+canvas.addEventListener("mousedown", function(e) {
+	mouseClick = true;
+	mouseX = e.x;
+	mouseY = e.y;
+	console.log(e.x, e.y);
+});
+
+canvas.addEventListener("mouseup", function(e){
+	mouseClick = false;
+});
 
 const zoombieArray = [];
 class Zoombie {
 	constructor(){
 		this.x = 1400;
-		this.y = 250 + Math.floor(Math.random() * 200);
-		this.speed = - Math.floor(Math.random() * 10);
+		this.y = 400 - Math.floor(Math.random() * 200);
+		this.speed = - 5 - Math.floor(Math.random() * 10);
 	}
 
 	update(){
 		this.x += this.speed;
+		if(mouseClick){
+			if(mouseX > this.x && mouseX < this.x + zoombieWidth
+			&& mouseY > this.y && mouseY < this.y + zoombieHeight){
+				return "HIT";
+			}
+			return "MISSED";		
+		}
+		if(this.x < -140){
+			return "PASSED";
+		}
+		return "MOVE";
 	}
 
 	draw(){
@@ -41,22 +56,51 @@ class Zoombie {
 	}
 }
 
-function animate() {
-	gameFrame++;
-	if(gameFrame % 20 == 0) {
+function zoombiesBehavior(){
+	if(gameFrame % 50 == 0) {
 		zoombieArray.push(new Zoombie);
 	}
-	
-	ctx.save();
-	ctx.setTransform(1, 0, 0, 1, 0, 0);
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.restore();
+	for(let i=0; i < zoombieArray.length; i++){
+		let zoombieEvent = zoombieArray[i].update();
+		if(zoombieEvent == "HIT"){
+			zoombieArray.splice(i, 1);
+			score += 15;
+		}
+		else if(zoombieEvent == "MISSED"){
+			//score -= 7;
+		}
+		else if(zoombieEvent == "PASSED"){
+			zoombieArray.splice(i, 1);
+			lifes--;
+		}
+		else zoombieArray[i].draw();
+	}
+}
 
-	zoombieArray.forEach(zoombie => {
-		zoombie.update();
-		zoombie.draw();
-	});
-		
+function scoreDraw(){
+	ctx.strokeText("Score: " + score, 1050, 50, 140);
+}
+
+function lifesDraw(){
+	for (let i=0; i < lifes; i++){
+		ctx.drawImage(lifePicture, 600 + 45 * i, 20);
+	}
+}
+
+function gameOver(){
+	for(let i=0; i < zoombieArray.length; i++){
+		score = -99999;
+		zoombieArray[i].splice(i, 1);
+	}
+}
+
+function animate() {
+	gameFrame++;
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	zoombiesBehavior();
+	scoreDraw();
+	lifesDraw();
+	if(lifes < 0) gameOver();
 	requestAnimationFrame(animate);
 }
 animate();

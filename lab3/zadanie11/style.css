@@ -7,4 +7,9 @@ html, body {
     background-attachment: fixed;
     background-size: 100% auto;
     overflow: hidden;
+    z-index: 1;
+}
+
+#gameCanvas {
+    z-index: 2;
 }

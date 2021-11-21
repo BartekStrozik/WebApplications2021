@@ -1,0 +1,53 @@
+.span {
+    color: red;
+}
+
+.rd{
+    background-color: red;
+    width: 150px;
+    border: 5px solid black;
+    
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 10px;
+}
+
+.yl{
+    background-color: yellow;
+    width: auto;
+    border: 10px;
+}
+
+.grn{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+}
+
+.bl{
+    background-color: blue;
+}
+
+.border-test {
+    color: black;
+    border: 5px solid yellow;
+}
+
+.dark-blue {
+    background-color: darkblue;
+    width: 80px;
+}
+
+.semi-dark-blue {
+    background-color: blue;
+    width: 80px;
+}
+
+.light-blue {
+    background-color: darkcyan;
+    width: 80px;
+}
+
+.row-class {
+    height: 40px;
+}

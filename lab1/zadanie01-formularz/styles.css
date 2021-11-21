@@ -1,0 +1,16 @@
+.bl {
+    width: 400px;
+    background-color: blue;
+    color: yellow;
+}
+
+.orng {
+    width: 400px;
+    background-color: orange;
+    color: yellow;
+}
+
+.form-class {
+    width: 400px;
+    padding: 3%;
+}

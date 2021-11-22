@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: url("board-bg.jpg") center center no-repeat;
+    background: url("images/board-bg.jpg") center center no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;
     overflow: hidden;

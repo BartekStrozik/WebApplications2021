@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,27 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/92285a8f6a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container-mt-4">
         <div id="contact-list"></div>
-        
-        <form id="contact-form" class="form">
-            <div class="form-group">
-                <label for="name" style="text-transform: uppercase;">Imię i nazwisko</label>
-                <input type="text" id="name" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="phone-number" style="text-transform: uppercase;">Telefon</label>
-                <input type="text" id="phone-number" class="form-control">
-            </div>
-            <input type="submit" value="Dodaj" class="submit-button">
-        </form>
+
+        <div class="form">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name" style="text-transform: uppercase;">Imię i nazwisko</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="phone-number" style="text-transform: uppercase;">Telefon</label>
+                    <input type="text" id="phone-number" class="form-control">
+                </div>
+                <input type="submit" value="Dodaj" class="submit-button">
+            </form>
+        </div>
     </div>
 
     <script defer src="script.js"></script>
 </body>
+
 </html>

@@ -75,7 +75,10 @@
             if(!propagation){
                 e.stopPropagation();
                 //console.log("One Stopped");
+                document.getElementById("announcement").innerHTML = "Hit 1 point pool!";
+                return;
             }
+            document.getElementById("announcement").innerHTML = "Hit 1 point pool!";
         });
 
         two_points_pool[0].addEventListener("click", e => {
@@ -88,7 +91,10 @@
             if(!propagation){
                 e.stopPropagation();
                 //console.log("One Stopped");
+                document.getElementById("announcement").innerHTML = "Hit 2 point pool!";
+                return;
             }
+            document.getElementById("announcement").innerHTML = "Hit 2 point pool!";
         }
         );
 
@@ -100,9 +106,12 @@
             addPoints(5);
             //console.log("One Bubble");
             if(!propagation){
-                 e.stopPropagation();
+                e.stopPropagation();
                 //console.log("One Stopped");
+                document.getElementById("announcement").innerHTML = "Hit 5 point pool!";
+                return;
             }
+            document.getElementById("announcement").innerHTML = "Hit 5 point pool!";
         });
 
         let reset_button = document.getElementsByClassName("reset")[0];

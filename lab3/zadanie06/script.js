@@ -1,7 +1,8 @@
 class Contact {
     constructor(name, phone_number) {
         this.name = name;
-        this.phone_number = phone_number;
+        console.log(phone_number.match(/.{1,3}/g));
+        this.phone_number = phone_number.match(/.{1,3}/g).join(" ");
     }
 }
 
@@ -16,12 +17,7 @@ class UI {
                 <li>${contact.phone_number}</li>
                 </ul>
                 <div class="trash">
-                    <i
-                        class="far fa-trash-alt"
-                        style="pointer: finger;
-                        margin: 5px;
-                        color: white;
-                        flex: center">
+                    <i class="far fa-trash-alt">
                     </i>
                 </div>
             </div>
@@ -65,7 +61,7 @@ document.querySelector("#contact-form").addEventListener("submit", e => {
     if(name === "" || phone_number === ""){
         UI.showAlert("Fill in all fields!", "danger");
     }
-    else if(!name.toString().match(/^[A-Z]+[A-Za-z]+$/)) {
+    else if(!name.toString().match(/^[A-Z]+[A-Za-z]+[\s][A-Za-z]+$/)) {
         UI.showAlert("Name should start with big letter and consist of only letters!", "danger");
     }
     else if (!phone_number.toString().match(/^[0-9]+(\.?[0-9]+)?$/) || phone_number.length != 9){

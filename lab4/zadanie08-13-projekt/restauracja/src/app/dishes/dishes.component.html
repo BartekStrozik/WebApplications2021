@@ -1,0 +1,12 @@
+<div id="counter">
+    Zarezerwoano łącznie {{ reservedDishes }} dań.
+</div>
+<div class="row">
+    <app-dish-item
+        *ngFor="let dish of dishes"
+        [dish]="dish"
+        (reserveDish)="changeAmount($event)"
+        (onDeleteDish)="deleteDish(dish)"
+        class="col-lg-3 col-sm-6">
+    </app-dish-item>
+</div>

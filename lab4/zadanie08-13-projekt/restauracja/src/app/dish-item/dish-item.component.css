@@ -1,0 +1,33 @@
+.dish-card {
+    margin: 2% 10%;
+    padding: 5% 5%;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .dish-card {
+        flex: 45%;
+        max-width: 50%;
+    }
+}
+
+.tn {
+    margin: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+.buttons {
+    align-items: center;
+    padding: 2% 2%;
+}
+
+.btn {
+    width: 43%;
+}

@@ -1,0 +1,28 @@
+<form [formGroup]="dishForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="form-group">
+        <label for="dish-name" class="label">Nazwa potrawy</label>
+        <input type="text" name="dish-name" formControlName="dishName" class="form-control">
+    
+        <label for="cuisine" class="label">Kuchnia</label>
+        <input type="text" name="cuisine" formControlName="cuisine" class="form-control">
+    
+        <label for="category" class="label">Kategoria</label>
+        <input type="text" name="category" formControlName="category" class="form-control">
+    
+        <label for="type" class="label">Które danie</label>
+        <input type="text" name="type" formControlName="type" class="form-control">
+    </div>
+    <div class="form-group">
+        
+    
+        <label for="amountOfDishes" class="label">Liczba dostępnych dań</label>
+        <input type="text" name="amountOfDishes" formControlName="amountOfDishes" class="form-control">
+    
+        <label for="price" class="label">Cena</label>
+        <input type="text" name="price" formControlName="price" class="form-control">
+    
+        <label for="description" class="label">Opis</label>
+        <input type="text" name="description" formControlName="description" class="form-control description">
+    </div>
+    <input type="submit" value="Dodaj danie" class="btn btn-block btn-success add-button" /> 
+</form>

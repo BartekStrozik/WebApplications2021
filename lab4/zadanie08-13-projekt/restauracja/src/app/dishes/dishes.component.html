@@ -9,4 +9,7 @@
         (onDeleteDish)="deleteDish(dish)"
         class="col-lg-3 col-sm-6">
     </app-dish-item>
+    <app-add-dish
+        (dishJSON)="addDish($event)">
+    </app-add-dish>
 </div>

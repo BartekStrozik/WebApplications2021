@@ -17,7 +17,26 @@
       "amountOfDishes": 10,
       "price": 8,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/schabowe.jpg"
+    },
+    {
+      "id": 2,
+      "dishName": "Rosół",
+      "cuisine": "kuchnia polska",
+      "category": "zupa",
+      "type": "zupa",
+      "ingredients": [
+        {
+          "ingredient": "włoszczyzna"
+        },
+        {
+          "ingredient": "przyprawy"
+        }
+      ],
+      "amountOfDishes": 12,
+      "price": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/rosol.jpg"
     },
     {
       "id": 3,
@@ -36,7 +55,7 @@
       "amountOfDishes": 7,
       "price": 20,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/hawajska.jpg"
     },
     {
       "id": 4,
@@ -58,7 +77,7 @@
       "amountOfDishes": 12,
       "price": 20,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/margherita.jpg"
     },
     {
       "id": 5,
@@ -80,7 +99,7 @@
       "amountOfDishes": 10,
       "price": 25,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/pizzasalami.jpeg"
     },
     {
       "id": 6,
@@ -111,7 +130,7 @@
       "amountOfDishes": 8,
       "price": 30,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/capriciosa.jpeg"
     },
     {
       "id": 7,
@@ -142,7 +161,7 @@
       "amountOfDishes": 20,
       "price": 20,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/sajgonki.jpg"
     },
     {
       "id": 8,
@@ -170,7 +189,7 @@
       "amountOfDishes": 8,
       "price": 25,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/zupa-seczuanska.webp"
     },
     {
       "id": 9,
@@ -192,7 +211,7 @@
       "amountOfDishes": 5,
       "price": 25,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/gyros.webp"
     },
     {
       "id": 10,
@@ -220,7 +239,7 @@
       "amountOfDishes": 12,
       "price": 32,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/ryz-curry.jpg"
     },
     {
       "id": 11,
@@ -242,7 +261,7 @@
       "amountOfDishes": 10,
       "price": 25,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/pak-choi.jpg"
     },
     {
       "id": 12,
@@ -261,7 +280,32 @@
       "amountOfDishes": 8,
       "price": 30,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
-      "url": "assets/images/food.jpeg"
+      "url": "assets/images/francuskie.jpg"
+    },
+    {
+      "id": 13,
+      "dishName": "Risotto z grzybami",
+      "cuisine": "kuchnia francuska",
+      "category": "danie wegetariańskie",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "suszone borowiki"
+        },
+        {
+          "ingredient": "szalotka"
+        },
+        {
+          "ingredient": "ryż do ristotto"
+        },
+        {
+          "ingredient": "mieszane grzyby"
+        }
+      ],
+      "amountOfDishes": 20,
+      "price": 18,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/risotto.jpg"
     }
   ]
 }

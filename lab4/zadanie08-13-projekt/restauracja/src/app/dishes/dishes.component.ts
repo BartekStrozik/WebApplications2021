@@ -15,7 +15,7 @@ export enum AmountChange {
 export class DishesComponent implements OnInit {
   dishes: Dish[] = [];
   reservedDishes: number = 0;
-
+  
   constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
@@ -29,9 +29,12 @@ export class DishesComponent implements OnInit {
   }
 
   deleteDish(dish: Dish){
-    console.log("Delete dish!");
     this.dishService.deleteDish(dish)
       .subscribe(() => this.dishes = this.dishes.filter(d => d.id != dish.id));
   }
 
+  addDish(dish: Dish){
+    this.dishService.addDish(dish)
+      .subscribe((dish) => (this.dishes.push(dish)));
+  }
 }

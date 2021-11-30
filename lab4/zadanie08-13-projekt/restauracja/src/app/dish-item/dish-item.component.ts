@@ -21,12 +21,13 @@ export class DishItemComponent implements OnInit {
   }
 
   changeAmount(amountChange: AmountChange){
-    this.reserveDish.emit(amountChange);
     if(amountChange == AmountChange.MINUS && this.amount > 0){
       this.amount--;
+      this.reserveDish.emit(amountChange);
     }
     else if(amountChange == AmountChange.PLUS && this.amount < this.dish.amountOfDishes){
       this.amount++;
+      this.reserveDish.emit(amountChange);
     }
   }
 

@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="frame">
+        <select *ngIf="displayMarkSelect" #t (change)="onMarkSelect(t.value)">
+            <option>Select mark:</option>
+            <option *ngFor="let mark of marks">{{ mark }}</option>
+        </select>
+        <select *ngIf="displayModelSelect" #u (change)="onModelSelect(u.value)">
+            <option>Select model:</option>
+            <option *ngFor="let model of models">{{ model }}</option>
+        </select>
+        <select *ngIf="displayColorSelect" #v (change)="onColorSelect(v.value)">
+            <option>Select color:</option>
+            <option *ngFor="let color of colors">{{ color }}</option>
+        </select>
+        <h2 *ngIf="selectedCar">{{ selectedCar }}</h2>
+    </div>
+</div>

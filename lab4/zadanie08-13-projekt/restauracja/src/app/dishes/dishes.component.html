@@ -1,4 +1,4 @@
-<div id="counter">
+<div id="counter" [ngStyle]="{'background-color': reservedDishes <= 10 ? 'orange' : 'lightblue'}">
     Zarezerwoano łącznie {{ reservedDishes }} dań.
 </div>
 <div class="row">

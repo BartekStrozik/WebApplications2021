@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="frame">
+    <!--div class="form-group" *ngFor="let mark of marks">
+        <input
+            type="radio"
+            name="mark"
+            value="{{mark}}"
+            [(ngModel)]="chosenMark"
+            (change)=onMarkChoose() />
+        {{ mark }}
+        
+    </div-->
+    <select #t (change)="onMarkChoose(t.value)">
+        <option *ngFor="let mark of marks">{{ mark }}</option>
+    </select>
+    <select #u (change)="onModelChoose(u.value)">
+        <option *ngFor="let model of models">{{ model }}</option>
+    </select>
+    <select #v (change)="onColorChoose(v.value)">
+        <option *ngFor="let color of colors">{{ color }}</option>
+    </select>
+    <!--hr-->
+    <!--div class="form-group" *ngFor="let model of models">
+        <input
+            type="radio"
+            name="model"
+            value="{{model}}"
+            [(ngModel)]="chosenModel"
+            (change)=onModelChoose() />
+        {{ model }}
+    </div-->
+    <!--hr *ngIf="models.length > 0"-->
+    <!--div class="form-group" *ngFor="let color of colors">
+        <input 
+            type="radio"
+            name="color" 
+            value="{{color}}" 
+            [(ngModel)]="chosenColor"
+            (change)=onColorChoose() />
+        {{ color }}
+    </div>
+    <h2 *ngIf="chosenCar">{{ chosenCar }}</h2-->
+    </div>
+</div>

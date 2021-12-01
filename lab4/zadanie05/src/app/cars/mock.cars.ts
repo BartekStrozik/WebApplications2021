@@ -42,6 +42,11 @@ export const CARS: Car[] = [
         "colors": [ "red", "lightblue", "darkblue" ]
     },
     {
+        "mark": "Mercedes",
+        "model": "S-Class",
+        "colors": [ "blue" ]
+    },
+    {
         "mark": "Mazda",
         "model": "MX-5",
         "colors": [ "red", "darkred", "black" ]

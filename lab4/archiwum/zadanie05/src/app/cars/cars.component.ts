@@ -11,49 +11,44 @@ import { CARS } from './mock.cars';
 export class CarsComponent implements OnInit {
   cars: Car[] = [];
   marks: string[] = [];
+  selectedMark: string = "";
   models: string[] = [];
+  selectedModel: string = "";
   colors: string[] = [];
-  chosenColor: string = "";
-  chosenCar: string = "";
+  selectedColor: string = "";
+  selectedCar: string = "";
   
   constructor() { }
 
   ngOnInit(): void {
     this.cars = CARS;
-    for(let car of this.cars){
-      this.marks.push(car.mark);
-    }
+    this.marks = this.cars.map(car => car.mark);
     this.marks = Array.from(new Set(this.marks));
   }
 
-  onMarkChoose(selectedMark: any) {
-    this.models = [];
-    const filteredCars = this.cars.filter(car => car.mark === selectedMark);
+  onMarkSelect() {
     this.marks = [];
-    for(let car of filteredCars){
-      this.models.push(car.model);
-    }
+    const filteredCars = this.cars.filter(car => car.mark === this.selectedMark);
+    if(!filteredCars) return;
+    this.models = filteredCars.map(car => car.model);
     this.models = Array.from(new Set(this.models));
   }
 
-  onModelChoose(selectedModel: any) {
-    this.colors = [];
-    const filteredCars = this.cars.find(car => car.model === selectedModel);
+  onModelSelect() {
     this.models = [];
-    // const colors1 = //filteredCars.map(car => car.colors);
-    // console.log(colors1);
-    // for(let car of filteredCars){
-    //   for(let color of car.colors){
-    //     this.colors.push(color);
-    //   }
-    // }
+    const filteredCars = this.cars.filter(car => car.model === this.selectedModel);
     if(!filteredCars) return;
-    this.colors = filteredCars.colors;
-    // this.colors = Array.from(new Set(this.colors));
+    const colorsArrays = filteredCars.map(car => car.colors);
+    for(let colors of colorsArrays){
+      for(let color of colors){
+        this.colors.push(color);
+      }
+    }
+    this.colors = Array.from(new Set(this.colors));
   }
 
-  onColorChoose(selectedColor : any){
+  onColorSelect(){
     this.colors = [];
-    //this.chosenCar =  this.chosenModel + ", " + this.chosenMark + ", " + this.chosenColor;
+    this.selectedCar =  this.selectedModel + ", " + this.selectedMark + ", " + this.selectedColor;
   }
 }

@@ -43,9 +43,14 @@ export class CarsComponent implements OnInit {
   onModelSelect(selectedModel: any) {
     this.displayModelSelect = false;
     this.selectedModel = selectedModel;
-    const filteredCars = this.cars.find(car => car.model === this.selectedModel);
+    const filteredCars = this.cars.filter(car => car.model === this.selectedModel);
     if(!filteredCars) return;
-    this.colors = filteredCars.colors;
+    const colorsArrays = filteredCars.map(car => car.colors);
+    for(let colors of colorsArrays){
+      for(let color of colors){
+        this.colors.push(color);
+      }
+    }
     this.colors = Array.from(new Set(this.colors));
     this.displayColorSelect = true;
   }

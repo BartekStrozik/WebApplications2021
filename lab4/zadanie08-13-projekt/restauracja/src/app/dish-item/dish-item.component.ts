@@ -11,13 +11,18 @@ import { AmountChange } from '../dishes/dishes.component'
 export class DishItemComponent implements OnInit {
   changeType = AmountChange;
   amount: number = 0;
+  maxAmount: number = 0;
   @Input() dish!: Dish;
+  @Input() theMostExpensive: boolean = false;
+  @Input() theMostCheap: boolean = false;
   @Output() reserveDish: EventEmitter<AmountChange> = new EventEmitter();
   @Output() onDeleteDish: EventEmitter<Dish> = new EventEmitter();
+  
 
   constructor() { }
 
   ngOnInit(): void {
+    this.maxAmount = this.dish.amountOfDishes;
   }
 
   changeAmount(amountChange: AmountChange){
@@ -25,7 +30,7 @@ export class DishItemComponent implements OnInit {
       this.amount--;
       this.reserveDish.emit(amountChange);
     }
-    else if(amountChange == AmountChange.PLUS && this.amount < this.dish.amountOfDishes){
+    else if(amountChange == AmountChange.PLUS && this.amount < this.maxAmount){
       this.amount++;
       this.reserveDish.emit(amountChange);
     }

@@ -2,8 +2,16 @@
     Zarezerwoano łącznie {{ reservedDishes }} dań.
 </div>
 <div class="row">
+    <app-filters
+        (selectCuisine)="cuisineFilterBy($event)"
+        (selectType)="typeFilterBy($event)"
+        (priceMinMax)="pricesFilterBy($event)">
+    </app-filters>
+</div>
+<div class="row">
     <app-dish-item
-        *ngFor="let dish of dishes"
+        *ngFor="let dish of (dishes | cuisinePipe:cuisineFilter | typePipe:typeFilter 
+        | priceminPipe:priceMinFilter | pricemaxPipe:priceMaxFilter)"
         [dish]="dish"
         (reserveDish)="changeAmount($event)"
         (onDeleteDish)="deleteDish(dish)"

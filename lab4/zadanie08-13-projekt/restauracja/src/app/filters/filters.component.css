@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5% 80%;
+}
+
+.selects {
+    display: flex;
+    padding: 0% 10%;
+}
+
+.prices {
+    display: flex;
+    padding: 0% 10%;
+}
+
+.label{
+    width: 80px;
+}

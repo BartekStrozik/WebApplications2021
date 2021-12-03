@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: column;
     flex-wrap: wrap;
+    outline: 2px solid red;
 }
 
 @media (max-width: 800px) {
@@ -19,15 +20,32 @@
     box-shadow: #555 1px 1px 8px 1px;
 }
 
+.price {
+    align-items: center;
+    text-align: center;
+}
+
 ul {
     list-style: none;
 }
 
 .buttons {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 2% 2%;
 }
 
 .btn {
-    width: 43%;
+    width: 40%;
+}
+
+.amount1 {
+    width: 20%;
+    text-align: center;
+}
+
+.amount2 {
+    width: 60%;
+    text-align: center;
 }

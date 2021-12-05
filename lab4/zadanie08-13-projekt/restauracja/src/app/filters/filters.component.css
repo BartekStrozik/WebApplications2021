@@ -1,20 +1,32 @@
-.container {
+.container{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5% 80%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 8em;
+    margin: 10%;
 }
 
-.selects {
+.cuisines {
     display: flex;
-    padding: 0% 10%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 5%;
+}
+
+.types {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 5%;
 }
 
 .prices {
     display: flex;
-    padding: 0% 10%;
-}
-
-.label{
-    width: 80px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 5%;
 }

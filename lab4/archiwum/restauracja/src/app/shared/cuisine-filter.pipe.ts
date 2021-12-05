@@ -4,6 +4,8 @@ import { Dish } from "../Dish";
 @Pipe({'name': 'cuisinePipe'})
 export class CuisineFilterPipe implements PipeTransform{
     transform (dishes: Dish[], cuisines: string[]): Dish[]{
+        //if(cuisineCriteria === "all") return dishes;
+        //return dishes.filter(dish => dish.cuisine === cuisineCriteria);
         if(cuisines.indexOf("all") > -1) return dishes;
         let resultDishes: Dish[] = [];
         for(let cuisine of cuisines){

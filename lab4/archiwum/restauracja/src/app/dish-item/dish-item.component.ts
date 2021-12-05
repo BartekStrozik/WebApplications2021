@@ -17,6 +17,7 @@ export class DishItemComponent implements OnInit {
   @Input() theMostCheap: boolean = false;
   @Output() reserveDish: EventEmitter<AmountChange> = new EventEmitter();
   @Output() onDeleteDish: EventEmitter<Dish> = new EventEmitter();
+  
 
   constructor() { }
 

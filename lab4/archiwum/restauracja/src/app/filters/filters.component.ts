@@ -9,30 +9,46 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
+  cuisines: string[] = ["kuchnia chińska", "kuchnia francuska", "kuchnia włoska", "kuchnia polska"];
+  types: string[] = ["danie główne", "zupa", "drugie danie"];
+
   @Output() selectCuisine: EventEmitter<string[]> = new EventEmitter();
-  @Output() selectType: EventEmitter<string[]> = new EventEmitter();
+  @Output() selectType: EventEmitter<any> = new EventEmitter();
   @Output() priceMinMax: EventEmitter<any> = new EventEmitter();
-
-  italianCuisineChecked: boolean = false;
-  chineseCuisineChecked: boolean = false;
-  polishCuisineChecked: boolean = false;
-
-  mainTypeChecked: boolean = false;
-  soupTypeChecked: boolean = false;
-  mainCourseTypeChecked: boolean = false;
+  
+  /*filtersForm = new FormGroup({
+    italianCuisine: new FormControl(),
+    chineseCuisine: new FormControl(),
+    polishCuisine: new FormControl()
+  })*/
 
   pricesForm = new FormGroup({
     priceMin: new FormControl(),
     priceMax: new FormControl()
   })
 
+  italianCuisineChecked: boolean = false;
+  chineseCuisineChecked: boolean = false;
+  polishCuisineChecked: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  /* cuisines */
+  /*onCuisineSelect(selectedCuisine: string){
+    this.selectCuisine.emit(selectedCuisine);
+  }
 
+  onTypeSelect(selectedType: string){
+    this.selectType.emit(selectedType);
+  }
+
+  onSubmit() {
+    this.priceMinMax.emit(this.pricesForm.value);
+  }*/
+
+  
   italianCuisineChange(){
     this.italianCuisineChecked = !this.italianCuisineChecked;
     if(this.italianCuisineChecked) this.selectCuisine.emit(["kuchnia włoska", "checked"]);
@@ -49,31 +65,5 @@ export class FiltersComponent implements OnInit {
     this.polishCuisineChecked = !this.polishCuisineChecked;
     if(this.polishCuisineChecked) this.selectCuisine.emit(["kuchnia polska", "checked"]);
     else this.selectCuisine.emit(["kuchnia polska", "unchecked"]);
-  }
-
-  /* types */
-
-  mainTypeChange(){
-    this.mainTypeChecked = !this.mainTypeChecked;
-    if(this.mainTypeChecked) this.selectType.emit(["danie główne", "checked"]);
-    else this.selectType.emit(["danie główne", "unchecked"]);
-  }
-
-  soupTypeChange(){
-    this.soupTypeChecked = !this.soupTypeChecked;
-    if(this.soupTypeChecked) this.selectType.emit(["zupa", "checked"]);
-    else this.selectType.emit(["zupa", "unchecked"]);
-  }
-
-  mainCourseTypeChange() {
-    this.mainCourseTypeChecked = !this.mainCourseTypeChecked;
-    if(this.mainCourseTypeChecked) this.selectType.emit(["drugie danie", "checked"]);
-    else this.selectType.emit(["drugie danie", "unchecked"]);
-  }
-
-  /* prices */
-
-  onSubmit() {
-    this.priceMinMax.emit(this.pricesForm.value);
   }
 }

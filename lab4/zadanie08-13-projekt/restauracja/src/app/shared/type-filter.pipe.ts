@@ -3,8 +3,12 @@ import { Dish } from "../Dish";
 
 @Pipe({'name': 'typePipe'})
 export class TypeFilterPipe implements PipeTransform{
-    transform (dishes: Dish[], typeCriteria: string): Dish[]{
-        if(typeCriteria === "all") return dishes;
-        return dishes.filter(dish => dish.type === typeCriteria);
+    transform (dishes: Dish[], types: string[]): Dish[]{
+        if(types.indexOf("all") > -1) return dishes;
+        let resultDishes: Dish[] = [];
+        for(let type of types){
+            resultDishes = [...resultDishes, ...dishes.filter(dish => dish.type === type)];
+        }
+        return resultDishes;
     }
 }

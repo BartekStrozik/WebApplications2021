@@ -1,0 +1,41 @@
+<!--div class="container">
+    <div class="selects">
+        <select #cuisine (change)="onCuisineSelect(cuisine.value)">
+            <option>Wybierz kuchnię</option>
+            <option *ngFor="let cuisine of cuisines">{{ cuisine }}</option>
+            <option>wszystkie kuchnie</option>
+        </select>
+        <select #type (change)="onTypeSelect(type.value)">
+            <option>Wybierz typ dania</option>
+            <option *ngFor="let type of types">{{ type }}</option>
+            <option>wszystkie typy</option>
+        </select>
+    </div>
+    <div class="prices">
+        <form [formGroup]="pricesForm" (ngSubmit)="onSubmit()">
+            <label for="price" class="label">Cena od</label>
+            <input type="number" id="amount" formControlName="priceMin">
+
+            <label for="price" class="label">Cena do</label>
+            <input type="number" id="amount" formControlName="priceMax">
+
+            <input type="checkbox" id="cuisine-chbx">
+            <label for="cuisine-chbx">Kuchnia włoska</label>
+
+            <input type="submit" value="Filtruj po cenach" class="btn btn-block" />
+        </form>
+    </div>
+</div-->
+
+<div class="groups">
+    <form>
+        <input type="checkbox" id="italian-cuisine" (change)="italianCuisineChange()">
+        <label for="italian-cuisine">Kuchnia włoska</label>
+
+        <input type="checkbox" id="chinese-cuisine" (change)="chineseCuisineChange()">
+        <label for="chinese-cuisine">Kuchnia chińska</label>
+
+        <input type="checkbox" id="polish-cuisine" (change)="polishCuisineChange()">
+        <label for="polish-cuisine">Kuchnia polska</label>
+    </form>
+</div>

@@ -20,7 +20,7 @@ export class DishesComponent implements OnInit, OnChanges {
   reservedDishes: number = 0;
 
   cuisineFilter: string[] = ["all"];
-  typeFilter: string[] = ["all"];
+  typeFilter: string = "all";
   priceMinFilter: number = 0;
   priceMaxFilter: number = 100;
 
@@ -37,66 +37,35 @@ export class DishesComponent implements OnInit, OnChanges {
   }
 
   changeAmount(amountChange: AmountChange) {
-    if (amountChange == AmountChange.MINUS) this.reservedDishes--;
-    else if (amountChange == AmountChange.PLUS) this.reservedDishes++;
+    if(amountChange == AmountChange.MINUS) this.reservedDishes--;
+    else if(amountChange == AmountChange.PLUS) this.reservedDishes++;
   }
 
-  /* filters */
-
-  cuisineFilterBy(args: string[]) {
+  cuisineFilterBy(cuisine: string){
+    //if(cuisine === "wszystkie kuchnie") this.cuisineFilter = "all";
+    //else this.cuisineFilter = cuisine;
     let index = this.cuisineFilter.indexOf("all");
-    if (index > -1) this.cuisineFilter = [];
+    if(index > -1) this.cuisineFilter = [];
     this.cuisineFilter = this.cuisineFilter.map(cuisine => cuisine);
-
-    let cuisine = args[0];
-    let checked = args[1];
-    if (checked === "checked") {
-      this.cuisineFilter.push(cuisine);
-    }
-    else {
-      let index = this.cuisineFilter.indexOf(cuisine);
-      if (index > -1) this.cuisineFilter.splice(index, 1);
-    }
-
-    if (this.cuisineFilter.length == 0){
-      this.cuisineFilter.push("all");
-    }
+    this.cuisineFilter.push(cuisine);
   }
 
-  typeFilterBy(args: string[]) {
-    let index = this.typeFilter.indexOf("all");
-    if (index > -1) this.typeFilter = [];
-    this.typeFilter = this.typeFilter.map(type => type);
-
-    let type = args[0];
-    let checked = args[1];
-    if (checked === "checked") {
-      this.typeFilter.push(type);
-    }
-    else {
-      let index = this.typeFilter.indexOf(type);
-      if (index > -1) this.typeFilter.splice(index, 1);
-    }
-
-    if (this.typeFilter.length == 0){
-      this.typeFilter.push("all");
-    }
+  typeFilterBy(type: string){
+    if(type === "wszystkie typy") this.typeFilter = "all";
+    else this.typeFilter = type;
   }
 
-  pricesFilterBy(price: Price) {
+  pricesFilterBy(price: Price){
     this.priceMinFilter = price.priceMin;
     this.priceMaxFilter = price.priceMax;
   }
 
-  /* CRUD */
-
-  deleteDish(dish: Dish) {
+  deleteDish(dish: Dish){
     this.dishService.deleteDish(dish)
       .subscribe(() => this.dishes = this.dishes.filter(d => d.id != dish.id));
   }
 
-  addDish(dish: Dish) {
-    console.log(dish);
+  addDish(dish: Dish){
     this.dishService.addDish(dish)
       .subscribe((dish) => (this.dishes.push(dish)));
   }

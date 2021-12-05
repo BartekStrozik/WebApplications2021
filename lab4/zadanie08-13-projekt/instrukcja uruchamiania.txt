@@ -1,0 +1,4 @@
+udostępnić plik db.json przez json-server
+>json-server db.json
+
+dane są na stałe zapisane w pliku db_backup.json

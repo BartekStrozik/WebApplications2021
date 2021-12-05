@@ -13,14 +13,6 @@
         <input type="text" name="type" formControlName="type" class="form-control">
     </div>
     <div class="form-group">
-        <label class="label">Składniki</label>
-        <input
-            *ngFor="let ingredient of ingredients" 
-            type="text"
-            class="form-control"
-            formControlName="ingredients.item{{ingredients.length}}">
-        <button (click)=addIngredient()>Dodaj składnik</button>    
-
         <label for="amountOfDishes" class="label">Liczba dostępnych dań</label>
         <input type="text" name="amountOfDishes" formControlName="amountOfDishes" class="form-control">
     
@@ -28,12 +20,12 @@
         <input
               type="number"
               id="amount"
-              class="form-control"
-              formControlName="price">
+              class="form-control">
+        <!--input type="text" name="price" formControlName="price" class="form-control"-->
     
         <label for="description" class="label">Opis</label>
         <!--textarea id="description" name="description"></textarea-->
-        <input type="text" name="description" formControlName="description" class="form-control">
+        <input type="text" name="description" formControlName="description" class="form-control description">
     </div>
     <input type="submit" value="Dodaj danie" class="btn btn-block btn-success add-button" /> 
 </form>

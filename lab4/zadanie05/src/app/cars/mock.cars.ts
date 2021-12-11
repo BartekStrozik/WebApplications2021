@@ -12,18 +12,13 @@ export const CARS: Car[] = [
         "colors": [ "black", "white" ]
     },
     {
-        "mark": "Mustang",
-        "model": "Test Model",
-        "colors": [ "silver", "gray" ]
-    },
-    {
         "mark": "Opel",
-        "model": "Astra1",
+        "model": "Astra",
         "colors": [ "red", "lightblue", "darkblue" ]
     },
     {
         "mark": "Opel",
-        "model": "Astra1",
+        "model": "Astra",
         "colors": [ "red", "lightblue", "darkblue" ]
     },
     {
@@ -51,4 +46,29 @@ export const CARS: Car[] = [
         "model": "MX-5",
         "colors": [ "red", "darkred", "black" ]
     },
+    {
+        "mark": "Audi",
+        "model": "Q2",
+        "colors": ["orange", "blue"]
+    },
+    {
+        "mark": "Audi",
+        "model": "R8",
+        "colors": ["white", "black", "blue", "red"]
+    },
+    {
+        "mark": "BMW",
+        "model": "E60",
+        "colors": ["black", "silver", "red", "yellow"]
+    },
+    {
+        "mark": "BMW",
+        "model": "E63",
+        "colors": ["orange"]
+    },
+    {
+        "mark": "BMW",
+        "model": "E90",
+        "colors": ["black"]
+    }
 ]

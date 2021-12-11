@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="photo" *ngFor="let photo of photos">
+        <a href="{{ photo.thumbnailUrl }}"><img src="{{ photo.url }}" width="600" height="600"></a>
+        <p>Tytuł: {{ photo.title }}</p>
+    </div>
+</div>

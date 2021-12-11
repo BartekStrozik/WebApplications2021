@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { EventEmitter } from '@angular/core';
 import { Dish } from '../Dish';
 import { Ingredient } from '../Ingredient';
+import { DishService } from '../services/dish.service';
 
 @Component({
   selector: 'app-add-dish',
@@ -22,10 +23,10 @@ export class AddDishComponent implements OnInit {
     url: new FormControl()
   });
 
-  @Output() dishJSON: EventEmitter<Dish> = new EventEmitter();
+  //@Output() dishJSON: EventEmitter<Dish> = new EventEmitter();
   ingredients: Ingredient[] = [];
 
-  constructor() { }
+  constructor(private dishService: DishService) { }
 
   ngOnInit(): void {
   }
@@ -36,12 +37,8 @@ export class AddDishComponent implements OnInit {
   }
 
   onSubmit() {
-    // if(!this.dishForm.value.dishName){
-    //   alert('Podaj nazwę dania, które chcesz dodać');
-    //   return;
-    // }
-    this.dishJSON.emit(this.dishForm.value);
-
+    console.log(this.dishForm.value);
+    this.dishService.addDish(this.dishForm.value).subscribe();
   }
 
 }

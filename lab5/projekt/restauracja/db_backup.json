@@ -1,0 +1,311 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "dishName": "Kotlety schabowe",
+      "cuisine": "kuchnia polska",
+      "category": "danie mięsne",
+      "type": "drugie danie",
+      "ingredients": [
+        {
+          "ingredient": "mięso drobiowe"
+        },
+        {
+          "ingredient": "jajko"
+        }
+      ],
+      "amountOfDishes": 10,
+      "price": 8,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/schabowe.jpg"
+    },
+    {
+      "id": 2,
+      "dishName": "Rosół",
+      "cuisine": "kuchnia polska",
+      "category": "zupa",
+      "type": "zupa",
+      "ingredients": [
+        {
+          "ingredient": "włoszczyzna"
+        },
+        {
+          "ingredient": "przyprawy"
+        }
+      ],
+      "amountOfDishes": 12,
+      "price": 5,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/rosol.jpg"
+    },
+    {
+      "id": 3,
+      "dishName": "Pizza z ananasem",
+      "cuisine": "kuchnia włoska",
+      "category": "pizza",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "pizza"
+        },
+        {
+          "ingredient": "ananas"
+        }
+      ],
+      "amountOfDishes": 7,
+      "price": 20,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/hawajska.jpg"
+    },
+    {
+      "id": 4,
+      "dishName": "Pizza Margherita",
+      "cuisine": "kuchnia włoska",
+      "category": "pizza",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "ciasto"
+        },
+        {
+          "ingredient": "sos pomidorowy"
+        },
+        {
+          "ingredient": "ser mozzarella"
+        }
+      ],
+      "amountOfDishes": 12,
+      "price": 20,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/margherita.jpg"
+    },
+    {
+      "id": 5,
+      "dishName": "Pizza salami",
+      "cuisine": "kuchnia włoska",
+      "category": "pizza",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "ciasto"
+        },
+        {
+          "ingredient": "sos pomidowory"
+        },
+        {
+          "ingredient": "salami"
+        }
+      ],
+      "amountOfDishes": 10,
+      "price": 25,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/pizzasalami.jpeg"
+    },
+    {
+      "id": 6,
+      "dishName": "Pizza capriciosa",
+      "cuisine": "kuchnia włoska",
+      "category": "pizza",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "ciasto"
+        },
+        {
+          "ingredient": "sos pomidorowy"
+        },
+        {
+          "ingredient": "papryka konserwowa"
+        },
+        {
+          "ingredient": "pieczarki"
+        },
+        {
+          "ingredient": "szynka"
+        },
+        {
+          "ingredient": "ser mozzarella"
+        }
+      ],
+      "amountOfDishes": 8,
+      "price": 30,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/capriciosa.jpeg"
+    },
+    {
+      "id": 7,
+      "dishName": "Chińskie sajgonki",
+      "cuisine": "kuchnia chińska",
+      "category": "danie mięsne",
+      "type": "drugie danie",
+      "ingredients": [
+        {
+          "ingredient": "filet z kurczaka"
+        },
+        {
+          "ingredient": "pęczek cebulki"
+        },
+        {
+          "ingredient": "marchewka"
+        },
+        {
+          "ingredient": "płaty ryżowe"
+        },
+        {
+          "ingredient": "olej"
+        },
+        {
+          "ingredient": "woda"
+        }
+      ],
+      "amountOfDishes": 20,
+      "price": 20,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/sajgonki.jpg"
+    },
+    {
+      "id": 8,
+      "dishName": "Zupa seczuańska",
+      "cuisine": "kuchnia chińska",
+      "category": "zupa",
+      "type": "zupa",
+      "ingredients": [
+        {
+          "ingredient": "wieprzowina chuda"
+        },
+        {
+          "ingredient": "rosół"
+        },
+        {
+          "ingredient": "kapusta pekińska"
+        },
+        {
+          "ingredient": "grzyby Mun"
+        },
+        {
+          "ingredient": "szalotka"
+        }
+      ],
+      "amountOfDishes": 8,
+      "price": 25,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/zupa-seczuanska.webp"
+    },
+    {
+      "id": 9,
+      "dishName": "Gyros w picie",
+      "cuisine": "kuchnia grecka",
+      "category": "danie mięsne",
+      "type": "drugie danie",
+      "ingredients": [
+        {
+          "ingredient": "uda z kurczaka"
+        },
+        {
+          "ingredient": "mąka"
+        },
+        {
+          "ingredient": "drożdże"
+        }
+      ],
+      "amountOfDishes": 5,
+      "price": 25,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/gyros.webp"
+    },
+    {
+      "id": 10,
+      "dishName": "Ryż curry z warzywami",
+      "cuisine": "kuchnia chińska",
+      "category": "danie warzywne",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "pierś z kurczaka"
+        },
+        {
+          "ingredient": "ryż długoziarnisty"
+        },
+        {
+          "ingredient": "mrożona mieszanka chińska"
+        },
+        {
+          "ingredient": "pieczarki"
+        },
+        {
+          "ingredient": "kukurydza"
+        }
+      ],
+      "amountOfDishes": 12,
+      "price": 32,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/ryz-curry.jpg"
+    },
+    {
+      "id": 11,
+      "dishName": "Zupa pak choi",
+      "cuisine": "kuchnia chińska",
+      "category": "zupa",
+      "type": "zupa",
+      "ingredients": [
+        {
+          "ingredient": "schab bez kości"
+        },
+        {
+          "ingredient": "rosół"
+        },
+        {
+          "ingredient": "kapusta pak choi"
+        }
+      ],
+      "amountOfDishes": 10,
+      "price": 25,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/pak-choi.jpg"
+    },
+    {
+      "id": 12,
+      "dishName": "Piersi z kurczaka w cieście francuskim",
+      "cuisine": "kuchnia francuska",
+      "category": "danie mięsne",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "pierś z kurczaka"
+        },
+        {
+          "ingredient": "ciasto francuskie"
+        }
+      ],
+      "amountOfDishes": 8,
+      "price": 30,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/francuskie.jpg"
+    },
+    {
+      "id": 13,
+      "dishName": "Risotto z grzybami",
+      "cuisine": "kuchnia francuska",
+      "category": "danie wegetariańskie",
+      "type": "danie główne",
+      "ingredients": [
+        {
+          "ingredient": "suszone borowiki"
+        },
+        {
+          "ingredient": "szalotka"
+        },
+        {
+          "ingredient": "ryż do ristotto"
+        },
+        {
+          "ingredient": "mieszane grzyby"
+        }
+      ],
+      "amountOfDishes": 20,
+      "price": 18,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel dapibus odio. Morbi justo nibh, scelerisque ac efficitur ut, sagittis eget lectus. Nullam imperdiet interdum porttitor. Phasellus molestie sit amet nulla gravida aliquet. ",
+      "url": "assets/images/risotto.jpg"
+    }
+  ]
+}

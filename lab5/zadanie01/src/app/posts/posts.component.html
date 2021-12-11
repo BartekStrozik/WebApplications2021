@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Posty</h1>
+    <div class="post" *ngFor="let post of posts">
+        <h3>Post {{ post.id }}:</h3>
+        <p>Post użytkownika: {{ post.userId }}</p>
+        <p style="font-weight: bold;">Tytuł: {{ post.title }}</p>
+        <p>{{ post.body }}</p>
+    </div>
+</div>

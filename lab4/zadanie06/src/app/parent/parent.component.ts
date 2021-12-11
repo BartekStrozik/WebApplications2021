@@ -15,7 +15,7 @@ export class ParentComponent implements OnInit {
   }
 
   counterPlusPlus() {
-    this.counter += 1;
+    this.counter++;
     if(this.counter >= 10){
       this.available = false;
     }

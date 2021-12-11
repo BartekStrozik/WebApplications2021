@@ -1,0 +1,42 @@
+<div class="dish-card" width="200" height="auto" [ngStyle]="{'outline-color': 'black'}">
+    <button type="button" class="btn btn-danger button"
+        (click)="onDelete(dish)">
+        Usuń danie
+    </button>
+    <img src="{{ dish.url }}" class="tn" width="200" height="160">
+    <div class="d-inline">
+        <ul>
+            <li>{{ dish.dishName | uppercase }}</li>
+            <li>{{ dish.cuisine | uppercase }}</li>
+            <li>{{ dish.category }}</li>
+            <li>{{ dish.type }}</li>
+        </ul>
+    </div>
+
+    <div class="price d-inline">{{ dish.price }}$</div>
+
+    <div class="buttons">
+        <button
+            type="button"
+            class="btn btn-danger"
+            [ngStyle] = "{'display': amount > 0 ? 'block' : 'none'}"
+            (click)="changeAmount(changeType.MINUS)">
+            -
+        </button>
+        <div 
+            *ngIf="amount > 0" 
+            class="amount1 d-inline"
+            [ngStyle] = "{'color': amount > maxAmount - 3 ? 'red' : 'black'}">
+            {{ amount }}
+        </div>
+        <div *ngIf="amount == 0" class="amount2 d-inline">Zamów danie!</div>
+        <button
+            type="button" 
+            class="btn btn-success"
+            [ngStyle] = "{'display': amount < maxAmount ? 'block' : 'none'}"
+            (click)="changeAmount(changeType.PLUS)">
+            +
+        </button>
+    </div>
+    
+</div>
